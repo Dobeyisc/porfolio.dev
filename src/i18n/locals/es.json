@@ -1,0 +1,37 @@
+{
+  "site.title": "Porfolio-dev | Desarrollador",
+  "site.description": "Bienvenido a la página de mi portafolio, donde puedes explorar una colección de mis trabajos más recientes y destacados.",
+  "home": {
+    "home.welcome": "Hola, soy Joan Esteban Méndez",
+    "home.description": "Desde Bogotá, Colombia co. <strong>Especializado en desarrollo de páginas web</strong>",
+    "error404.title": "404 Página no encontrada - Portfolio.dev",
+    "error404.description": "Página no encontrada (Error 404). Revisa la URL o explora nuestras secciones. ¿Necesitas ayuda? Contáctanos."
+  },
+  "nav": {
+    "projects.title" : "Proyectos",
+    "study.title" : "Estudios",
+    "about.title" : "Sobre mi"
+  },
+  "projects": {
+    ".title": "Proyectos",
+    ".PokeJs.title": "PokeApi - Encuentra tus favoritos",
+    ".PokeJs.description": "Ejemplo de uso de la Api para mostrar pokemons, sus tipos y evoluciones",
+    ".Notest.title": "NoteJs - Crea, edita y elimina tus tareas pendientes",
+    ".Notest.description": "NoteJs - Crea, edita y elimina Plataforma gratuita hecha con Tailwind y NextJs donde puedes iniciar sesión y usarla para realizar un seguimiento de tus tareas pendientes. ¡Pruébalo!",
+    ".Spotify-clone.title" : "Clon-Spotify ",
+    ".Spotify-clone.description" : "Proyecto que recrea la experiencia de Spotify utilizando tecnologías modernas como Svelte, Astro y Tailwind CSS. Esta aplicacion te permite disfrutar de las playlist preparadas con una interfaz de usuario interactiva"
+  },
+  "study": {
+    ".title": "Estudios",
+    ".Bootcamp.title": "Bootcamp PROTALENTO",
+    ".Bootcamp.date": "2023 - Presente",
+    ".Bootcamp.description": "Durante mi participación en el Bootcamp PROTALENTO desde 2023 hasta la actualidad, he estado inmerso en un riguroso programa de formación diseñado para desarrollar habilidades técnicas y profesionales. Este bootcamp me ha proporcionado una plataforma integral para explorar y perfeccionar mis habilidades en desarrollo web."
+  },
+  "about": {
+    ".title": "Sobre mi",
+    ".text": "¡Hola! Soy Joan Esteban <strong>tengo 20 años</strong> y soy de <strong>Bogotá, Colombia 🇨🇴</strong>, mi trayectoria me llevó a convertirme en desarrollador web tras finalizar mis estudios. Disfruto especialmente concentrándome en el rendimiento de las páginas web, <strong> el objetivo de brindar la mejor experiencia posible al usuario.</strong>"
+  },
+  "footer": {
+    ".description": "Hecho con ❤️ por Dobeyisc"
+  }
+}

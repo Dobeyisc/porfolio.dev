@@ -1,0 +1,78 @@
+---
+// Supports weights 200-800
+import '@fontsource-variable/manrope';
+
+import { ViewTransitions } from 'astro:transitions';
+import Header from '@/components/header/Header.astro'
+import Footer from '@/components/footer/Footer.astro'
+
+import { getLanguageFromUrl } from '@/i18n/utils';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+const lang = getLanguageFromUrl(Astro.url)
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ViewTransitions />
+	</head>
+	<body class="relative">
+		<div
+		class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full bg-[#1d4ed8] dark:bg-gray-950
+		bg-[radial-gradient(ellipse_90%_90%_at_50%_-20%,rgba(217,216,255,0.5),rgba(255,255,255,0.9))]
+		dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+			<Header />
+		<slot />
+			<Footer />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: dark light;
+	}
+	html {
+		font-family: 'Manrope Variable',system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+		overflow-inline: none;
+      }
+	  /* Custom scrollbar */
+	::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1;
+	}
+
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #c0c0c0;
+		border-radius: 9999px;
+	}
+
+	/* Handle on hover */
+
+	::-webkit-scrollbar-thumb:hover {
+		background: #a0a0a0;
+	}
+</style>

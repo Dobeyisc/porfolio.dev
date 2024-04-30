@@ -1,0 +1,25 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import LinkButtom from "@/components/projects/LinkButtom.astro"
+//icons
+import ErrorIcon from "@/components/error-page/ErrorIcon.astro"
+---
+
+<Layout title="404 - page not found" description="Pagina no encontrada">
+    <section class="block w-full h-screen transform text-center items-center overflow-hidden">
+        <div class="flex flex-col mt-44 align-middle items-center">
+          <ErrorIcon class="size-20"/>
+        </div>
+        <div>
+            <h1 class="text-gray-100 text-4xl scale-110 tracking-tight font-bold mt-12">
+                Page not found
+            </h1>
+            <p class="mt-4 text-neutral-400 font-normal text-pretty">
+                We can’t seem to find the page you are looking for.
+            </p>
+        </div>
+        <LinkButtom href="/" >
+            Home
+        </LinkButtom>
+      </section>
+</Layout>

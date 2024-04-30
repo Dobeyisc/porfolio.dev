@@ -1,0 +1,46 @@
+---
+//icons
+import LangIcon from "@/components/icons/nav/Translate.astro";
+
+import { LANGUAGES } from "@/i18n/ui";
+import { getLanguageFromUrl, useTranslate } from "@/i18n/utils";
+
+const lang = getLanguageFromUrl(Astro.url);
+const currentLocaleData = LANGUAGES[lang];
+const otherLocales = Object.values(LANGUAGES).filter(
+  (locale) => locale.code !== lang
+);
+---
+
+<div class="relative inline-block text-left">
+    <div class="group text-white rounded-md text-xs font-semibold bg-black/30 hover:bg-black/70 transition-all">
+  <button
+    id="theme-toggle-btn-translate"
+    type="button"
+    class="inline-flex justify-start items-center w-full gap-x-2 px-3 py-2"
+    aria-expanded="true"
+    aria-haspopup="true"
+  >
+    <currentLocaleData.flag />
+    {currentLocaleData.name}
+    <LangIcon />
+  </button>
+  <div
+    id="themes-menu-translate"
+    class="absolute hidden scale-80 top-8 right-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+  >
+  </div>
+  <ul 
+    class="group-hover:block group-hover:animate-fade-down group-hover:animate-duration-200 hidden pt-0.5 absolute w-full"
+    >
+        {
+            otherLocales.map((locale) => (
+                <li class="rounded-md bg-black/30 hover:bg-black/70 whitespace-no-wrap inline-flex justify-start items-center w-full gap-x-2 px-3 py-2">
+                    <locale.flag class="size-5"/>
+                    {locale.name}
+                </li>
+            ))
+        }
+        </ul>
+    </div>
+</div>

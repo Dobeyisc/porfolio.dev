@@ -1,0 +1,37 @@
+{
+    "site.title": "Porfólio-dev",
+    "site.description": "Bem-vindo à página do meu portfólio, onde você pode navegar por uma coleção dos meus trabalhos mais recentes e notáveis.",
+    "home": {
+      "home.welcome": "Bem-vindo, sou Joan Esteban Méndez",
+      "home.description": "De Bogotá, Colômbia co. <strong>Especializada em desenvolvimento de páginas web</strong>",
+      "error404.title": "404 Página não encontrada - Portfolio.dev",
+      "error404.description": "Página não encontrada (Erro 404). Verifique a URL ou explore nossas seções. Precisa de ajuda? Entre em contato conosco."
+    },
+    "nav": {
+      "projects.title" : "projetos",
+      "study.title" : "estúdios",
+      "about.title" : "sobre mim"
+    },
+    "projects": {
+      ".title": "Projetos",
+      ".PokeJs.title": "PokeJs - Encontre seus favoritos",
+      ".PokeJs.description": "Exemplo de uso da API para exibir pokémons, seus tipos e evoluções",
+      ".Notest.title": "NoteJs - Crie, edite e exclua suas tarefas",
+      ".Notest.description": "NoteJs - Crie, edite e exclua plataforma gratuita feita com Tailwind e NextJs onde você pode fazer login e usá-la para acompanhar suas tarefas pendentes, experimente!",
+      ".Spotify-clone.title": "Clone do Spotify",
+      ".Spotify-clone.description": "exemplo do site spotify com playlists funcionais feitas com Tailwind e Svelte"
+    },
+    "study": {
+      ".title": "Estudos",
+      ".Bootcamp.title": "Bootcamp PROTALENT",
+      ".Bootcamp.date": "2023 - Presente",
+      ".Bootcamp.description": "Durante a minha participação no Bootcamp PROTALENTO de 2023 até o presente, estive imerso em um rigoroso programa de treinamento projetado para desenvolver habilidades técnicas e profissionais. Este bootcamp me proporcionou uma plataforma abrangente para explorar e aprimorar minhas habilidades em desenvolvimento web."
+    },
+    "about": {
+      ".title": "Sobre mim",
+      ".text": "Meu nome é Johan Esteban, meus amigos me chamam de Méndez. Comecei a programar muito recentemente, em agosto de 2023. <strong>Atualmente estou fazendo projetos de código aberto na comunidade e projetos solo</strong >"
+    },
+    "footer": {
+      ".description": "Feito com ❤️ por Dobeyisc"
+    }
+}

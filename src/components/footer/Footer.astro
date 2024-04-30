@@ -1,0 +1,48 @@
+---
+import Github from "../icons/socials/Github.astro";
+import Linkdlnd from "../icons/socials/Linkdln.astro";
+import Facebook from "../icons/socials/Facebook.astro"
+
+const currentYear = new Date().getFullYear()
+
+import { getI18N } from "@/i18n/index"
+const { currentLocale } = Astro
+const i18n = getI18N({currentLocale})
+---
+
+<!-- Foooter -->
+<section class="">
+  <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+      <div class="flex justify-center mt-8 space-x-6">
+          <a 
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.facebook.com/profile.php?id=100060517392706" 
+          class="text-primary/90 dark:text-gray-400 hover:text-blue-900 dark:hover:text-white hover:scale-110 scale-100 hover:transition-all">
+              
+              <Facebook class="w-6 h-6"/>    
+          </a>
+          <a 
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://www.linkedin.com/in/martinez-esteban/" 
+          class="text-primary/90 dark:text-gray-400 hover:text-[#0A66C2] dark:hover:text-white hover:scale-110 scale-100 hover:transition-all">
+            
+            <Linkdlnd class="w-6 h-6" />
+        </a>
+        <a 
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://github.com/Dobeyisc" 
+          class="text-primary/90 dark:text-gray-400 hover:text-black dark:hover:text-white hover:scale-110 scale-100 hover:transition-all">
+              
+              <Github class="w-6 h-6"/>
+        </a>
+      </div>
+      <p 
+      class="mt-8 text-base leading-6 text-center dark:text-gray-400 text-zinc-800"
+      >
+        {currentYear} <span>|</span> {i18n.footer[".description"]}
+      </p>
+  </div>
+</section>

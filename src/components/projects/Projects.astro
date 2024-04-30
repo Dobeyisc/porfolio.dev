@@ -1,0 +1,123 @@
+---
+import GitHub from "../icons/socials/Github.astro"
+import NextJS from "../icons/frameworks/Next.astro"
+import Tailwind from "../icons/frameworks/Tail.astro"
+import Link from "../icons/Link.astro"
+import Javascript from "@/components/icons/frameworks/Javascript.astro"
+import Css from "../icons/frameworks/Css.astro"
+import AstroIcon from "../icons/frameworks/AstroIcon.astro"
+import SvelteIcon from "../icons/frameworks/SvelteIcon.astro"
+
+import LinkButton from "./LinkButtom.astro"
+
+//translate
+import { getI18N } from "@/i18n/index"
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-[#F7DF1E] text-black text-xs font-extrabold ",
+    icon: Javascript
+  },
+  CSS: {
+    name: "Css3",
+    class: "bg-[#016FBA] text-white",
+    icon: Css
+  },
+  ASTRO: {
+    name: "Astro.build",
+    class: "bg-[#201E4E] text-white",
+    icon: AstroIcon
+  },
+  SVELTE: {
+    name: "Svelte",
+    class: "bg-[#FF3E00] text-white",
+    icon: SvelteIcon
+  }
+}
+const PROJECTS = [
+  {
+    title: `${i18n.projects[".PokeJs.title"]}`,
+    description:`${i18n.projects[".PokeJs.description"]}`,
+    github: "https://github.com/Dobeyisc/Pokedex.git",
+    image: "/projects/Pokedex.jpeg",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS],
+  },
+  /*{
+    title: `${i18n.projects[".Notest.title"]}`,
+    description:`${i18n.projects[".Notest.description"]}`,
+    link: "https://adventjs.dev",
+    image: "/projects/To-do-list.jpeg",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },*/
+  {
+    title: `${i18n.projects[".Spotify-clone.title"]}`,
+    description: `${i18n.projects[".Spotify-clone.description"]}`,
+    github: "ttps://github.com/Dobeyisc/Pokedex.git",
+    image: "/projects/Spotify-clone.webp",
+    tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.SVELTE]
+  }
+]
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, /*link*/ github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+  <div class="w-full md:w-1/2">
+    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+      <img alt="" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" decoding="async" src={image} />
+    </div>
+  </div>  
+
+  <div class="w-full md:w-1/2 md:max-w-lg">
+    <h3 class="text-2xl font-bold text-primary dark:text-gray-100">
+      {title}
+    </h3>
+    <div class="flex flex-wrap mt-2">
+      <ul class="flex flex-row mb-2 gap-x-2">
+          {tags.map((tag) => (
+            <li>
+              <span
+                class={`flex gap-x-2 rounded-lg text-xs font-semibold ${tag.class} py-1 px-2`}
+              >
+                <tag.icon class="size-4" />
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+      <div class="mt-2 text-zinc-800 dark:text-gray-400">{description}</div>
+      <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Code
+            </LinkButton>
+          )}
+          <!--{link && (
+            <LinkButton href={link}>
+              <Link class="size-6" />
+              Preview
+            </LinkButton>
+          )}-->
+        </footer>
+    </div>
+  </div>
+</article>
+    ))
+  }
+</div>

@@ -1,0 +1,37 @@
+{
+  "site.title": "Porfolio-dev",
+  "site.description": "Welcome to my portfolio page, where you can browse a collection of my most recent and notable works.",
+  "home": {
+    "home.welcome": "Welcome, I'm Joan Esteban Mendez",
+    "home.description": "From Bogota, Colombia co. <strong>Specialized in the development of web pages</strong>",
+    "error404.title": "404 Page not found - Portfolio.dev",
+    "error404.description": "Page not found (Error 404). Check the URL or explore our sections. Need help? Contact us."
+  },
+  "nav" : {
+    "projects.title" : "Projects",
+    "study.title" : "Study",
+    "about.title" : "About-me"
+  },
+  "projects": {
+    ".title": "Projects",
+    ".PokeJs.title": "PokeJs - Find your favorites",
+    ".PokeJs.description": "Example of using Api to visualize pokemons, their types and evolutions",
+    ".Notest.title": "NoteJs - Create, edit and delete your to-dos",
+    ".Notest.description": "NoteJs - Create, edit and delete Free platform made with Tailwind and NextJs in which you can log in and use it to have your pending or tasks, Try it!",
+    ".Spotify-clone.title" : "Spotify clone",
+    ".Spotify-clone.description" : "example of the spotify website with functional playlists made with Tailwind and Svelte"
+  },
+  "study": {
+    ".title": "Studies",
+    ".Bootcamp.title": "PROTALENT Bootcamp",
+    ".Bootcamp.date": "2023 - Present",
+    ".Bootcamp.description": "During my participation in the PROTALENTO Bootcamp from 2023 to present, I have been immersed in a rigorous training program designed to develop technical and professional skills. This bootcamp has provided a comprehensive platform to explore and perfect my skills in web development."
+  },
+  "about": {
+    ".title": "About me",
+    ".text": "My name is Johan Esteban, my friends call me Mendez. I started programming very recently, in August 2023. <strong>I am currently carrying out open source projects in the community and solo projects</strong>"
+  },
+  "footer": {
+    ".description": "Made with ❤️ by Dobeyisc"
+  }
+}
