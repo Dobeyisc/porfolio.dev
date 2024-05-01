@@ -3,7 +3,7 @@
   "site.description": "Bienvenido a la página de mi portafolio, donde puedes explorar una colección de mis trabajos más recientes y destacados.",
   "home": {
     "home.welcome": "Hola, soy Joan Esteban Méndez",
-    "home.description": "Desde Bogotá, Colombia co. <strong>Especializado en desarrollo de páginas web</strong>",
+    "home.description": "Desarrollador Fullstack, desde Bogotá, Colombia co. <strong>Especializado en desarrollo de páginas web</strong>",
     "error404.title": "404 Página no encontrada - Portfolio.dev",
     "error404.description": "Página no encontrada (Error 404). Revisa la URL o explora nuestras secciones. ¿Necesitas ayuda? Contáctanos."
   },

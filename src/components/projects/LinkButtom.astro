@@ -5,7 +5,15 @@ const { href } = Astro.props
 <a
   href={href}
   role="link"
-  class="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+  class="glass-btn inline-flex items-center justify-center gap-2 px-3 py-2 space-x-2 text-md font-medium text-primary dark:text-white max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 p-1 rounded-xl border dark:bg-gray-900/90 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
 >
   <slot />
 </a>
+<style>
+  .glass-btn {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:1px solid rgba(255, 255, 255, 0.18);
+  }
+</style>

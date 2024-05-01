@@ -6,30 +6,24 @@ const { currentLocale } = Astro
 const i18n = getI18N({currentLocale})
 
 ---
-<section class="relative flex max-w-xl items-center justify-center">
-  
-    <div
-      class="mb-10 flex w-full flex-col items-end justify-between gap-20 xl:mb-28 xl:flex-row"
-    >
-      <div class="flex w-full flex-col gap-5">
-        <div class="flex items-center gap-4">
-          <div class="h-[3px] w-8 bg-primary dark:bg-white md:w-10"></div>
-          <span 
-          class="sm:text-lg text-zinc-700 dark:text-zinc-200"
-          set:html={i18n.home["home.welcome"]}
-          >
-        </div>
-        <section class="min-h-40 sm:min-h-48">
-          <TextMachine client:load/>
-        </section>
-      </div>
-      <div class="flex w-full flex-col gap-5">
-          <div class="flex sm:flex-none h-[3px] w-8 bg-primary dark:bg-white md:w-10"></div>
-        <p class="max-w-lg sm:text-lg text-center sm:text-start text-zinc-700 dark:text-white [&>strong]:font-serif [&>strong]:font-medium [&>strong]:tracking-normal [&>strong]:text-ice [&>strong]:dark:text-yellow-600"
-          set:html={i18n.home["home.description"]}
-          />
-      </div>
+<div
+  class="mb-10 flex w-full flex-col items-end justify-between gap-20 xl:mb-28 xl:flex-row"
+>
+  <div class="flex w-full flex-col gap-5">
+    <div class="flex items-center gap-4">
+      <div class="h-[3px] w-8 bg-primary dark:bg-white md:w-10"></div>
+      <span class="sm:text-lg text-zinc-700 dark:text-zinc-200"
+      set:html={i18n.home["home.welcome"]}
+      />
     </div>
-  </section>
-  
-  
+    <h1 class="min-h-[100px] sm:min-h-40 md:min-h-48 lg:min-h-48 xl:min-h-48">
+      <TextMachine client:visible/>
+    </h1>
+  </div>
+  <div class="flex w-full flex-col gap-5">
+    <div class="h-[3px] w-8 bg-primary dark:bg-white md:w-10"></div>
+    <p class="max-w-lg text-zinc-700 dark:text-zinc-200 sm:text-lg [&>strong]:font-serif [&>strong]:font-medium [&>strong]:tracking-normal [&>strong]:text-ice [&>strong]:dark:text-dark"
+      set:html={i18n.home["home.description"]}
+    />
+  </div>
+</div>

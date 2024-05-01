@@ -7,7 +7,8 @@ export default {
 		extend: {
 			colors: {
 				primary: '#1E1E1E',
-				ice: '#003159'
+				ice: '#003159',
+				dark: '#FFBF00'
 			},
 		},
 	},
